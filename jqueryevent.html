@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Example 2: Event Handling</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        // Run after the ROM tree is constructed.
+        $(document).ready(function () {
+            // Set the content
+            $('#hello').html('Click me!');
+
+            // Bind a onclick handler to a selected element
+            $('#hello').click(function () {
+                $(this).html('Hello, world!');
+                return false;   // Prevent triggering the default handler
+            });
+
+            // Bind onmouseover/onmouseout handlers to all selected elements
+            $('p').mouseover(function () {
+                $(this).addClass('green');
+            });
+            $('p').mouseout(function () {
+                $(this).removeClass('green');
+            });
+        });
+    </script>
+    <style>
+        .red {
+            color: #FF0000;
+        }
+
+        .green {
+            color: #00FF00;
+        }
+
+        .blue {
+            color: #0000FF;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hello">&nbsp;</h1>
+    <p id="message" class="red">First Line </p>
+    <p class="red">Second Line </p>
+    <p>Third Line </p>
+</body>
+
+</html>

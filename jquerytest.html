@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Example 1: jQuery Selectors and Operations</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {  // or shorthand of $( function () { 
+            // Your jQuery scripts here!
+            $("#hello").html("Hello, World"); // replace innerHTML
+            $("#hello").addClass('green'); //add css
+            // Select an element that matches the element's "unique id"
+            $('#message').append("(id matched)");  // Append at the end
+
+            // Select element(s) that match "HTML tag name" and process via implicit loop
+            $('p').prepend("(tag-name matched)");  // Add in front
+
+            // Select element(s) that match the "CSS classname" and process via explicit loop
+           $('.red').each(function () {
+                $(this).append("(class-name matched)");
+                $(this).prepend("(class-name matched)");
+            });
+
+            // Apply many operations via chaining
+            $('.red').before("<p>Before</p>")   // before the current element
+               .after("<p>After</p>");
+        });
+    </script>
+</head>
+
+<body>
+<style>
+    .red {
+        color: #FF0000;
+    }
+    .green {
+        color: #00FF00;
+    }
+    .blue {
+        color: #0000FF;
+    }
+</style>
+</head>
+
+<body>
+    <h1 id="hello">Hi!</h1>
+    <p id="message" class="red">First Line </p>
+    <p class="red">Second Line </p>
+    <p>Third Line </p>
+</body>
+
+</html>

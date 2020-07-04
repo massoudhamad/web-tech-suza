@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- JQSelectorTest.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Testing jQuery Selectors</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script>
+       /*  $(document).ready(function () {
+           console.log("Hello"); 
+        }); */
+
+        function foo()
+        {
+            console.log("foo");
+        }
+        $(document).ready(foo);
+        var bar = function()
+        {
+            console.log("bar");
+        }
+        $(document).ready(bar);
+
+        // 2. On "ready", callback a pre-defined function (with no argument)
+           /*  $(document).ready(foo);
+            function foo() {   // function can be defined later
+                console.log("foo");
+            } */
+
+            // 3. Use a function variable - variable must be defined before used.
+            /* var bar = function () {   // function variable
+                console.log("bar");
+            }
+            $(document).ready(bar);   */ // pass a function variable
+
+            // 4. This won't work!
+            //    .ready() takes a function object, not a statement!
+            //$(document).ready(alert("This won't work!"));
+
+            
+
+        // $(function () {   // Shorthand for .ready()
+        //     console.log($('#header'));  // ID-Selector
+        //     console.log($('p'));        // Tag-Selector
+        //     console.log($('.non-existence'));  // Class-Selector
+        // });
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </div>
+</body>
+
+</html>

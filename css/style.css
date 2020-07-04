@@ -1,0 +1,16 @@
+p {
+    background-color: yellow;
+}
+
+#even {
+    font-size: 20px;
+    color:yellowgreen;
+}
+.odd 
+{
+    color:red;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            Regular Expression
+        </title>
+    </head>
+    <body>
+        <script>
+            // var n='abc123d4e5';
+            // console.log(n.search(/[0-9][a-z][0-9]/));
+            // console.log(/[0-9][a-z][0-9]/.test(n));
+            // var chars = 'abc123K456';
+            // console.log(chars.search(/[^0-9a-z]/));
+            // console.log(/[^0-9a-zA-Z]/.test(chars));
+
+            // console.log(/[a-z]?/.test('aa14b'));
+            //console.log(/^[a-z][1-9]{2}[a-z]$/.test('a03b'));
+            //console.log(/^[a-z][0-9a-z]*[a-z]$/.test('a1b2c'));
+
+        </script>
+
+        <p>The current date/time is <span id='dateTime'></span>. </p>
+        <script>
+               document.getElementById('dateTime').innerHTML=new Date();
+               document.getElementById('dateTime').style.backgroundColor='red';
+        </script> 
+
+        <!--Event Listner DOM-->
+        <button id="clickMe">Click Me!</button>
+        <p>
+        You've clicked the button <span id="numClicks">0 times</span>.
+
+        <script>
+        var clicks = 0;
+        function clickEvent()
+        {
+            var numclick=document.getElementById('numClicks');
+            clicks++;
+            if(clicks == 1)
+            {
+                numclick.innerHTML='once ';
+            }
+            else
+            {
+                numclick.innerHTML= clicks +' times ';
+            }
+        }
+        var num=document.getElementById('clickMe');
+        num.addEventListener('click',clickEvent);
+        </script>
+
+                <!-- <div id="mouseOverMe"> Put the mouse here! </div> <p>
+                <div class="highlightText"> This is some text. </div> <p>
+                <div> This is some other text. </div> <p>
+                <div class="highlightText"> This text is important, too.</div>
+                <script>
+                function makeBold() {
+                var divs = document.getElementsByClassName('highlightText');
+                for (var i = 0; i < divs.length; i++) {
+                divs[i].style.color = 'red';
+                divs[i].style.fontWeight = 'bold';
+                }
+                }
+                function restore() {
+                var divs = document.getElementsByClassName('highlightText');
+                for (var i = 0; i < divs.length; i++) {
+                divs[i].style.color = 'black';
+                divs[i].style.fontWeight = 'normal';
+                }
+                }
+                var mouseOverMeDiv = document.getElementById('mouseOverMe');
+                mouseOverMeDiv.addEventListener('mouseover', makeBold);
+                mouseOverMeDiv.addEventListener('mouseout', restore);
+                </script> -->
+<!-- <input id="nameInput"></input>
+<p>
+Hello, <span id="nameField">guest</span>.
+<script>
+function nameHandler(e) {
+if (e.keyCode == 13) {
+var nameInput = document.getElementById('nameInput');
+var nameField = document.getElementById('nameField');
+nameField.innerHTML = nameInput.value;
+nameField.style.backgroundColor = 'cyan';
+nameField.style.textTransform = 'capitalize';
+}
+}
+document.addEventListener('keyup', nameHandler);
+</script> -->
+
+    </body>
+</html>
