@@ -1,0 +1,59 @@
+/* This is external  CSS */
+body {
+    background-color: yellow;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.sob {
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#message {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+}
+
+/*Table properties */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+ul li {
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+    color: green;
+    font-family: monospace;
+}
+
+a[href="https://amazon.com"] {
+    color: red;
+}
+
+a:hover {
+    font-size: 30px;
+}
+
+a:visited {
+    color: black;
+}
