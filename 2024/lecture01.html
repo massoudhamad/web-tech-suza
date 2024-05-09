@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>This is Javascript Page</title>
+    <script>
+        // alert("Hello, World!");
+        /*function hello() {
+            alert("Hello, World!");
+
+        }
+        var name = "SOB";
+        let counter = 0;
+        const PI = 3.14;
+
+        function count() {
+            counter++;
+            alert(counter);
+        }*/
+        function hello() {
+            const header = document.querySelector("h1");
+            if (header.innerHTML === "Hello!") {
+                header.innerHTML = "Hello, World!";
+            } else {
+                header.innerHTML = "Hello!";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <button onclick="hello();">Click Me!</button>
+    <!--  <h1>Hello World!</h1>
+    <button onclick="count();">Click Me!</button> -->
+</body>
+
+</html>
